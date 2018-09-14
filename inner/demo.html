@@ -1,0 +1,14 @@
+<form method="post" action="" name="rate">
+    <input type="number" name="rating" placeholder="Enter rating..." min="1" max="5" />
+    <input type="submit" name="" value="Rate Me " onsubmit=" return ratingValidate()"/>
+</form>
+
+<script type="text/javascript">
+    function ratingValidate() {
+        var x = document.forms["rate"]["rating"].value;
+        if (x > 5) {
+            alert("Rating must be greater than or equal to 5");
+            return false;
+        }
+    }
+</script>
